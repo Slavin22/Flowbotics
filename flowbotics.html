@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="flowbotics.js" type="text/javascript"></script>
+
+	<title>2017 Fantasy Football Flowbotics - Week 16</title>
+	
+	
+	<style type="text/css" nonce="1i8BY0W3EsheCLzojofSzt/QAzU">
+        html { overflow: visible; }
+        #sheets-viewport { overflow: auto; }
+        #sheets-viewport.widget-viewport { overflow: hidden; }
+        .grid-container { overflow: visible; background: white;}
+        .grid-table-container { overflow: visible; }
+        #top-bar {
+          background: url("//ssl.gstatic.com/docs/spreadsheets/publishheader.png") repeat-x bottom;
+          margin: 0;
+          overflow: hidden;
+        }
+        #top-bar {
+          border-bottom: 1px solid #ccc;
+          padding: 6px 6px 0;
+        }
+        #doc-title { padding-bottom: 5px; }
+        #doc-title .name { font-size: 15px; }
+        #sheet-menu {
+          font-size: 13px;
+          margin: 6px 0 0;
+          padding: 0 0 5px;
+        }
+        #sheet-menu li {
+          display: inline;
+          list-style-type: none;
+          margin: 0;
+          padding: 5px 8px;
+        }
+        #sheet-menu li.active {
+          background-color: #fff;
+          font-weight: bold;
+          border: 1px solid #999;
+        }
+        #top-bar #sheet-menu li.active {
+          border-bottom: 0;
+        }
+        #sheet-menu a, #sheet-menu a:visited { color: #07c; }
+        #footer {
+          background: #f0f0f0;
+          border-top: 1px #ccc solid;
+          border-bottom: 1px #ccc solid;
+          font-size: 13;
+          padding: 10px 10px;
+        }
+        .dash {
+          padding: 0 6px;
+        }
+        .ritz .waffle a { color: inherit; }
+        .ritz .waffle .s34 {border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s49 {border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s63 {background-color:#ffffff;text-align:left;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s44 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s52 {border-right:1px SOLID #000000;background-color:#c9daf8;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s77 {border-bottom:1px SOLID #000000;background-color:#cccccc;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s2 {background-color:#cccccc;text-align:center;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s67 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s18 {background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s68 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s65 {background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s31 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:12pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+        .ritz .waffle .s32 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:12pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;} 
+        .ritz .waffle .s58 {background-color:#d9ead3;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s30 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:right;color:#000000;font-family:'Arial';font-size:12pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s64 {background-color:#cccccc;text-align:left;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s6 {border-bottom:1px SOLID #000000;background-color:#cccccc;text-align:center;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s26 {background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s78 {border-bottom:1px SOLID #000000;background-color:#cccccc;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s47 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#fff2cc;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s50 {background-color:#fce5cd;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s53 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s8 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffff00;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s19 {background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s0 {border-right:1px SOLID #000000;background-color:#cccccc;text-align:left;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s36 {background-color:#ead1dc;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s61 {border-bottom:1px SOLID #000000;background-color:#f4cccc;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s11 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s39 {background-color:#d9d2e9;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s75 {background-color:#cccccc;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s7 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s29 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s33 {border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s54 {border-bottom:1px SOLID #000000;background-color:#c9daf8;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s1 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Helvetica Neue',Arial;font-size:24pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s9 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffff00;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s56 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#fce5cd;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s66 {background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s3 {background-color:#cccccc;text-align:left;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s5 {border-bottom:1px SOLID #000000;background-color:#cccccc;text-align:left;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s48 {background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s80 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:7pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s12 {background-color:#ffffff;text-align:center;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s15 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s43 {border-bottom:1px SOLID #000000;background-color:#d0e0e3;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s74 {background-color:#cccccc;text-align:left;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s24 {background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:12pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s70 {background-color:#ffffff;text-align:left;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s79 {border-bottom:1px SOLID #000000;background-color:#cccccc;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s37 {border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s60 {border-bottom:1px SOLID #000000;background-color:#d9ead3;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s38 {background-color:#fff2cc;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s23 {background-color:#ffffff;text-align:right;color:#000000;font-family:'Arial';font-size:12pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s27 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s72 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s17 {border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s73 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s71 {background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s59 {border-right:1px SOLID #000000;background-color:#d9ead3;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s45 {border-bottom:1px SOLID #000000;background-color:#d9d2e9;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s62 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#f4cccc;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s55 {border-bottom:1px SOLID #000000;background-color:#fce5cd;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s22 {border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s14 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:12pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s46 {border-bottom:1px SOLID #000000;background-color:#fff2cc;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s57 {background-color:#f4cccc;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s41 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s10 {background-color:#cccccc;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s21 {background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:14pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s40 {border-right:1px SOLID #000000;background-color:#d9d2e9;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s28 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:14pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s69 {border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s20 {border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s25 {border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:12pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s42 {border-bottom:1px SOLID #000000;background-color:#ead1dc;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s16 {border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s35 {background-color:#d0e0e3;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s13 {border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s76 {border-bottom:1px SOLID #000000;background-color:#cccccc;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s4 {border-bottom:1px SOLID #000000;background-color:#cccccc;text-align:left;font-weight:bold;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}
+    	.ritz .waffle .s51 {background-color:#c9daf8;text-align:center;color:#000000;font-family:'Arial';font-size:9pt;vertical-align:middle;white-space:normal;overflow:hidden;direction:ltr;padding:2px 3px 2px 3px;}</style>
+    	<script type="text/javascript" nonce="1i8BY0W3EsheCLzojofSzt/QAzU">
+        
+        var activeSheetId;
+
+        function switchToSheet(id) {
+          if (document.getElementById('sheet-menu')) {
+            document.getElementById('sheet-button-' + activeSheetId)
+                .className = '';
+            document.getElementById('sheet-button-' + id).className = 'active';
+          }
+
+          document.getElementById(activeSheetId).style.display = 'none';
+          document.getElementById(id).style.display = '';
+          activeSheetId = id;
+
+          // posObjs() is defined in embeddedObjectJs (see EmbeddedObjectHtmlBuilder.java)
+          posObjs();
+          return false;
+        }
+        
+        function init() {
+        var optPageSwitcher;
+        
+        function resize() {
+          var optMobileWebHeader = document.getElementById('docs-ml-header-id');
+          var optTopBar = document.getElementById('top-bar');
+          var optFooter = document.getElementById('footer');
+          var sheetsViewport = document.getElementById('sheets-viewport');
+
+          if (optMobileWebHeader) {
+            sheetsViewport.style.marginTop = optMobileWebHeader.offsetHeight +
+                (optTopBar ? optTopBar.offsetHeight : 0) + 'px';
+          }
+          var adjustedHeight = window.innerHeight -
+              (optTopBar ? optTopBar.offsetHeight : 0) -
+              (optFooter ? optFooter.offsetHeight : 0);
+          var adjustedWidth = window.innerWidth;
+          sheetsViewport.style.width = (adjustedWidth + 'px');
+          sheetsViewport.style.height = (adjustedHeight + 'px');
+          if (optPageSwitcher) {
+            optPageSwitcher.resize(adjustedWidth, adjustedHeight);
+          }
+        }
+        resize();
+        window.onresize = resize;
+        }
+        </script>
+        <style>@import url(https://fonts.googleapis.com/css?kit=ongwVZ0sNVLQxlHMqPO4fjtpoivPI6hVNs_cP5ZWAUa9Yz8_lY47aneBxn2tmrLA);</style>
+        <script nonce="1i8BY0W3EsheCLzojofSzt/QAzU">_docs_flag_initialData={"docs-mwid":true,"docs-smheo":false,"info_params":{"token":"AC4w5VhJpaKGstzHtQfiKIjjHDtc0R_rtg:1513821815054","includes_info_params":true},"ilcm":{"eui":"ADFN-cu1wykItSqTGm6GOzM8X7HxerSYFvVFX9as_j901N_Ml6orSKI1SkrsCXUkGxjyqiFOEfzW","je":1,"sstu":1513821815075000,"si":"CLjhqdyBmtgCFQEm7QodALUAHA","ei":[5702556,5701014,5702352,5702877,5701516,5700579,5700998,5700035,5702278,5700716,5702011,5701232,5701594,5701935,5700876,5701870,5701220,5701075,5700057,5700990,5701067,5701820,5700028,5701711,5701356,5700658,5701853,5702654,5701127,5700752,5700962,5700937,5701180,5701915,5700796,5701602,5700386,5700446,5700422,5700100,5701445,5701433,5701889,5701300,5701172,5700105,5700042,5701804,5700213,5700994,5702023,5700250,5700588,5701352,5700808,5702027,5701719,5700378,5701753,5700286,5701558,5701969,5701963,5700016,5700019,5701626,5700551,5701378,5701844,5702301,5700608,5700103,5701695,5700127,5702706,5701532,5701536,5700138,5700358,5700333,5701687,5700567,5700410,5700650,5700933,5702135,5700559,5702187,5701500,5700592,5701200,5700668,5701439,5700684,5701731,5701911,5702195,5701022,5702332,5701161,5700680,5701319,5701995,5700982]},"drive_url":"//drive.google.com?authuser\u003d0\u0026usp\u003dsheets_web","docs-sup":"/spreadsheets"}; _docs_flag_cek= null ;</script>
+</head>
+<script nonce="1i8BY0W3EsheCLzojofSzt/QAzU">document.addEventListener('DOMContentLoaded', init);</script>
+<body>
+	<div id="sheets-viewport">
+		<div id="2070762650" style="display:none;position:relative;" dir="ltr">
+			<div class="ritz grid-container" dir="ltr">
+				<table class="waffle" cellspacing="0" cellpadding="0">
+					<thead>
+						<tr>
+		<th class="row-header freezebar-origin-ltr header-shim row-header-shim"></th>
+	<th id="2070762650C0" style="width:12px" class="header-shim"></th>
+	<th id="2070762650C1" style="width:115px" class="header-shim"></th>
+	<th id="2070762650C2" style="width:48px" class="header-shim"></th>
+	<th id="2070762650C3" style="width:48px" class="header-shim"></th>
+	<th id="2070762650C4" style="width:48px" class="header-shim"></th>
+	<th id="2070762650C5" style="width:50px" class="header-shim"></th>
+	<th id="2070762650C6" style="width:48px" class="header-shim"></th>
+	<th id="2070762650C7" style="width:48px" class="header-shim"></th>
+	<th id="2070762650C8" style="width:48px" class="header-shim"></th>
+	<th id="2070762650C9" style="width:48px" class="header-shim"></th>
+	<th id="2070762650C10" style="width:48px" class="header-shim"></th>
+	<th id="2070762650C11" style="width:48px" class="header-shim"></th>
+	<th id="2070762650C12" style="width:48px" class="header-shim"></th>
+	<th id="2070762650C13" style="width:12px" class="header-shim"></th>
+</tr>
+</thead>
+	<tbody>
+		<tr style='height:20px;'>
+		<th id="2070762650R1" style="height: 12px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s3">Away Team:</td>
+	<td colspan="2" class="s3">
+		<select class="btn-primary" id="awayteam">
+			<option value="" disabled selected>Select a team:</option>
+		    <option value="ari">Arizona Cardinals</option>
+		    <option value="atl">Atlanta Falcons</option>
+		    <option value="bal">Baltimore Ravens</option>
+		    <option value="buf">Buffalo Bills</option>
+		    <option value="car">Carolina Panthers</option>
+		    <option value="chi">Chicago Bears</option>
+		    <option value="cin">Cincinnati Bengals</option>
+		    <option value="cle">Cleveland Browns</option>
+		    <option value="dal">Dallas Cowboys</option>
+		    <option value="den">Denver Broncos</option>
+		    <option value="det">Detroit Lions</option>
+		    <option value="gbp">Green Bay Packers</option>
+		    <option value="hou">Houston Packers</option>
+		    <option value="ind">Indianapolis Colts</option>
+		    <option value="jac">Jacksonville Jaguars</option>
+		    <option value="kcc">Kansas City Chiefs</option>
+		    <option value="lac">Los Angeles Chargers</option>
+		    <option value="lar">Los Angeles Rams</option>
+		    <option value="mia">Miami Dolphins</option>
+		    <option value="min">Minnesota Vikings</option>
+		    <option value="nep">New England Patriots</option>
+		    <option value="nos">New Orleans Saints</option>
+		    <option value="nyg">New York Giants</option>
+		    <option value="nyj">New York Jets</option>
+		    <option value="oak">Oakland Raiders</option>
+		    <option value="phi">Philadelphia Eagles</option>
+		    <option value="pit">Pittsburgh Steelers</option>
+		    <option value="sff">San Francisco 49ers</option>
+		    <option value="sea">Seattle Seahawks</option>
+		    <option value="tbb">Tamba Bay Buccaneers</option>
+		    <option value="ten">Tennessee Titans</option>
+		    <option value="was">Washington Redskins</option>
+		</select>
+	</td>
+	<td class="s3">Home Team:</td>
+	<td colspan="3" class="s3">
+		<select class="btn-primary" id="hometeam">
+			<option value="" disabled selected>Select a team:</option>
+		    <option value="ari">Arizona Cardinals</option>
+		    <option value="atl">Atlanta Falcons</option>
+		    <option value="bal">Baltimore Ravens</option>
+		    <option value="buf">Buffalo Bills</option>
+		    <option value="car">Carolina Panthers</option>
+		    <option value="chi">Chicago Bears</option>
+		    <option value="cin">Cincinnati Bengals</option>
+		    <option value="cle">Cleveland Browns</option>
+		    <option value="dal">Dallas Cowboys</option>
+		    <option value="den">Denver Broncos</option>
+		    <option value="det">Detroit Lions</option>
+		    <option value="gbp">Green Bay Packers</option>
+		    <option value="hou">Houston Packers</option>
+		    <option value="ind">Indianapolis Colts</option>
+		    <option value="jac">Jacksonville Jaguars</option>
+		    <option value="kcc">Kansas City Chiefs</option>
+		    <option value="lac">Los Angeles Chargers</option>
+		    <option value="lar">Los Angeles Rams</option>
+		    <option value="mia">Miami Dolphins</option>
+		    <option value="min">Minnesota Vikings</option>
+		    <option value="nep">New England Patriots</option>
+		    <option value="nos">New Orleans Saints</option>
+		    <option value="nyg">New York Giants</option>
+		    <option value="nyj">New York Jets</option>
+		    <option value="oak">Oakland Raiders</option>
+		    <option value="phi">Philadelphia Eagles</option>
+		    <option value="pit">Pittsburgh Steelers</option>
+		    <option value="sff">San Francisco 49ers</option>
+		    <option value="sea">Seattle Seahawks</option>
+		    <option value="tbb">Tamba Bay Buccaneers</option>
+		    <option value="ten">Tennessee Titans</option>
+		    <option value="was">Washington Redskins</option>
+		</select>
+	</td>
+	<td class="s3"><button type="button" class="btn btn-secondary" onclick="submit()">Submit</button></td>
+	<td class="s3"></td>
+	<td class="s3">Select Matchup:</td>
+	<td colspan="3" class="s3">
+		<!-- Insert Matchup select box -->
+		<select class="btn-primary" id="matchup" onchange="getMatchup(this.value)">
+			<option value="" disabled selected>Select a matchup:</option>
+		    <option value="1">Colts @ Ravens</option>
+		    <option value="2">Vikings @ Packers</option>
+		    <option value="3">Buccaneers @ Panthers</option>
+		    <option value="4">Browns @ Bears</option>
+		    <option value="5">Lions @ Bengals</option>
+		    <option value="6">Dolphins @ Chiefs</option>
+		    <option value="7">Bills @ Patriots</option>
+		    <option value="8">Falcons @ Saints</option>
+		    <option value="9">Chargers @ Jets</option>
+		    <option value="10">Rams @ Titans</option>
+		    <option value="11">Broncos @ Redskins</option>
+		    <option value="12">Jaguars @ 49ers</option>
+		    <option value="13">Giants @ Cardinals</option>
+		    <option value="14">Seahawks @ Cowboys</option>
+		    <option value="15">Steelers @ Texans</option>
+		    <option value="16">Raiders @ Eagles</option>
+		</select>
+	</td>
+	<td class="s3"></td>
+</tr>
+
+		<tr style='height:12px;'>
+		<th id="2070762650R1" style="height: 12px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s3"></td>
+	<td class="s4" dir="ltr"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s6"></td>
+	<td class="s6"></td>
+	<td class="s2"></td>
+</tr>
+		<tr style='height:39px;'>
+		<th id="2070762650R0" style="height: 39px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0" dir="ltr"></td>
+	<td class="s1" dir="ltr" colspan="12">WEEK <script type="text/javascript">document.write(week_number)</script> GAME FLOWBOTICS</td>
+	<td class="s2"></td>
+</tr>
+	<tr style='height:12px;'>
+		<th id="2070762650R1" style="height: 12px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s3"></td>
+	<td class="s4" dir="ltr"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s6"></td>
+	<td class="s6"></td>
+	<td class="s2"></td>
+</tr>
+	<tr style='height:26px;'>
+		<th id="2070762650R2" style="height: 26px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s7" dir="ltr">
+		<a target="_blank" rel="noreferrer" href="https://www.google.com/url?q=https://twitter.com/gregsauce&amp;sa=D&amp;ust=1513825415101000&amp;usg=AFQjCNF3SW49edEXk6p_V2eJtCtzFErCVA">@Gregsauce</a>
+</td>
+	<td class="s8" dir="ltr" colspan="4">DVOA/Lines Last Updated:<br><script type="text/javascript">document.write(date_DVOA_updated)</script></td>
+	<td class="s9" dir="ltr" colspan="4">Rosters/Injuries Last Updated:<br><script type="text/javascript">document.write(date_rosters_updated)</script></td>
+	<td class="s7" dir="ltr" colspan="3">
+		<a target="_blank" rel="noreferrer" href="https://www.google.com/url?q=https://twitter.com/GameFlowbotics&amp;sa=D&amp;ust=1513825415101000&amp;usg=AFQjCNES4K8k40i2Uvdsi3B0aYI3cUSOPw">@GameFlowbotics</a>
+</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:26px;'>
+		<th id="2070762650R3" style="height: 26px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s11" dir="ltr" rowspan="2">Links:</td>
+	<td class="s12" dir="ltr" colspan="3">
+		<a target="_blank" rel="noreferrer" href="https://www.google.com/url?q=http://www.twoqbs.com/&amp;sa=D&amp;ust=1513825415102000&amp;usg=AFQjCNF8PRiIPgzvyM_qxiTQG1N7TQuemQ">TwoQBs.com</a>
+</td>
+	<td class="s12" dir="ltr" colspan="3">
+		<a target="_blank" rel="noreferrer" href="https://www.google.com/url?q=http://www.footballoutsiders.com/stats/teameff&amp;sa=D&amp;ust=1513825415102000&amp;usg=AFQjCNHRuBjjyA7EvRxklzClgf2iFkpCHA">Football Outsiders&#39; DVOA</a>
+</td>
+	<td class="s13" dir="ltr" colspan="3">
+		<a target="_blank" rel="noreferrer" href="https://www.google.com/url?q=http://www.twoqbs.com/tag/weekly-rankings/&amp;sa=D&amp;ust=1513825415102000&amp;usg=AFQjCNGIyUwCYCLLOJWP5yrGZECpGGQCEg">TwoQBs Rankings</a>
+</td>
+	<td class="s14" dir="ltr" colspan="2" rowspan="2">
+		<a target="_blank" rel="noreferrer" href="https://www.google.com/url?q=http://paypal.me/gregsauce&amp;sa=D&amp;ust=1513825415102000&amp;usg=AFQjCNF-Ep1aOixg2I_VqbxvP18W9TcdJg">Donate</a>
+</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:26px;'>
+		<th id="2070762650R4" style="height: 26px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s15" dir="ltr" colspan="3">
+		<a target="_blank" rel="noreferrer" href="https://www.google.com/url?q=http://espn.go.com/nfl/lines&amp;sa=D&amp;ust=1513825415102000&amp;usg=AFQjCNG_V_1i_4qiHsZrVXJ8QRu-I4GQMA">NFL Betting Lines (ESPN)</a>
+</td>
+	<td class="s15" dir="ltr" colspan="3">
+		<a target="_blank" rel="noreferrer" href="https://www.google.com/url?q=http://fantasydata.com/nfl-stats/nfl-fantasy-football-stats.aspx&amp;sa=D&amp;ust=1513825415103000&amp;usg=AFQjCNGbEZCY9ioJiadFL4piS5ounI47zA">Fantasy Scoring Leaders</a>
+</td>
+	<td class="s16" dir="ltr" colspan="3">
+		<a target="_blank" rel="noreferrer" href="https://www.google.com/url?q=http://fantasydata.com/nfl-stats/nfl-fantasy-football-points-allowed-defense-by-position.aspx&amp;sa=D&amp;ust=1513825415103000&amp;usg=AFQjCNHbQmQ1Kk5QrduD1gEbg2mLQSLOsg">Fantasy Points Against</a>
+</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:12px;'>
+		<th id="2070762650R5" style="height: 12px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s3"></td>
+	<td class="s4"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s5"></td>
+	<td class="s6"></td>
+	<td class="s6"></td>
+	<td class="s2"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R6" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s17" id="game_day" dir="ltr" colspan="2"><script type="text/javascript">document.write(game_day)</script></td>
+	<td class="s17" dir="ltr" colspan="3" rowspan="2">Team Record</td>
+	<td class="s18" dir="ltr" rowspan="2">Spread</td>
+	<td class="s18" dir="ltr" rowspan="2">O/U</td>
+	<td class="s17" dir="ltr" rowspan="2">Implied Total</td>
+	<td class="s19" colspan="2">Total DVOA</td>
+	<td class="s20" colspan="2">Tot. Wt.&#39;d DVOA</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R7" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s17" id="game_time" dir="ltr" colspan="2"><script type="text/javascript">document.write(game_time)</script></td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s17" dir="ltr">Rk.</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R8" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s21" id="away_team" dir="ltr"><script type="text/javascript">document.write(away_team)</script></td>
+	<td class="s22" dir="ltr">(Away)</td>
+	<td class="s23" id="away_wins" dir="ltr"><script type="text/javascript">document.write(away_wins)</script></td>
+	<td class="s24" dir="ltr">—</td>
+	<td class="s25" id="away_losses" dir="ltr"><script type="text/javascript">document.write(away_losses)</script></td>
+	<td class="s26" id="away_spread" dir="ltr"><script type="text/javascript">document.write(away_spread)</script></td>
+	<td class="s27" id="over_under" dir="ltr" rowspan="2"><script type="text/javascript">document.write(over_under)</script></td>
+	<td class="s22" id="away_implied_total" dir="ltr"><script type="text/javascript">document.write(away_implied_total)</script></td>
+	<td class="s26" id="away_total_DVOA" dir="ltr"><script type="text/javascript">document.write(away_total_DVOA)</script></td>
+	<td class="s26" id="away_total_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_total_DVOA_rank)</script></td>
+	<td class="s26" id="away_total_wtd_DVOA" dir="ltr"><script type="text/javascript">document.write(away_total_wtd_DVOA)</script></td>
+	<td class="s22" id="away_total_wtd_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_total_wtd_DVOA_rank)</script></td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R9" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s28" id="home_team" dir="ltr"><script type="text/javascript">document.write(home_team)</script></td>
+	<td class="s29" dir="ltr">(Home)</td>
+	<td class="s30" id="home_wins" dir="ltr"><script type="text/javascript">document.write(home_wins)</script></td>
+	<td class="s31" dir="ltr">—</td>
+	<td class="s32" id="home_losses" dir="ltr"><script type="text/javascript">document.write(home_losses)</script></td>
+	<td class="s27" id="home_spread" dir="ltr"><script type="text/javascript">document.write(home_spread)</script></td>
+	<td class="s29" id="home_implied_total" dir="ltr"><script type="text/javascript">document.write(home_implied_total)</script></td>
+	<td class="s27" id="home_total_DVOA" dir="ltr"><script type="text/javascript">document.write(home_total_DVOA)</script></td>
+	<td class="s27" id="home_total_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_total_DVOA_rank)</script></td>
+	<td class="s27" id="home_total_wtd_DVOA" dir="ltr"><script type="text/javascript">document.write(home_total_wtd_DVOA)</script></td>
+	<td class="s29" id="home_total_wtd_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_total_wtd_DVOA_rank)</script></td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R10" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s17" dir="ltr">OVERALL<br>Off. vs. Def.</td>
+	<td class="s17" dir="ltr" colspan="3">Scoring</td>
+	<td class="s19" colspan="2">Off. DVOA</td>
+	<td class="s19" colspan="2">Off. Wt.&#39;d DVOA</td>
+	<td class="s19" colspan="2">Def. DVOA</td>
+	<td class="s20" colspan="2">Def. Wt.&#39;d DVOA</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R11" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s33" dir="ltr">Team</td>
+	<td class="s18" dir="ltr">PPG for</td>
+	<td class="s18" dir="ltr">PPG vs.</td>
+	<td class="s17" dir="ltr">PPG Diff.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s17" dir="ltr">Rk.</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R12" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s34" id="away_team_2" dir="ltr"><script type="text/javascript">document.write(away_team)</script></td>
+	<td class="s35" id="away_PPG_for" dir="ltr"><script type="text/javascript">document.write(away_PPG_for)</script></td>
+	<td class="s36" id="away_PPG_vs" dir="ltr"><script type="text/javascript">document.write(away_PPG_vs)</script></td>
+	<td class="s37" id="away_PPG_diff" dir="ltr"><script type="text/javascript">document.write(away_PPG_diff)</script></td>
+	<td class="s38" id="away_off_DVOA" dir="ltr"><script type="text/javascript">document.write(away_off_DVOA)</script></td>
+	<td class="s38" id="away_off_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_off_DVOA_rank)</script></td>
+	<td class="s38" id="away_off_wtd_DVOA" dir="ltr"><script type="text/javascript">document.write(away_off_wtd_DVOA)</script></td>
+	<td class="s38" id="away_off_wtd_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_off_wtd_DVOA_rank)</script></td>
+	<td class="s39" id="away_def_DVOA" dir="ltr"><script type="text/javascript">document.write(away_def_DVOA)</script></td>
+	<td class="s39" id="away_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_def_DVOA_rank)</script></td>
+	<td class="s39" id="away_def_wtd_DVOA" dir="ltr"><script type="text/javascript">document.write(away_def_wtd_DVOA)</script></td>
+	<td class="s40" id="away_def_wtd_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_def_wtd_DVOA_rank)</script></td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R13" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s41" id="home_team_2" dir="ltr"><script type="text/javascript">document.write(home_team)</script></td>
+	<td class="s42" id="home_PPG_for" dir="ltr"><script type="text/javascript">document.write(home_PPG_for)</script></td>
+	<td class="s43" id="home_PPG_vs" dir="ltr"><script type="text/javascript">document.write(home_PPG_vs)</script></td>
+	<td class="s44" id="home_PPG_diff" dir="ltr"><script type="text/javascript">document.write(home_PPG_diff)</script></td>
+	<td class="s45" id="home_off_DVOA" dir="ltr"><script type="text/javascript">document.write(home_off_DVOA)</script></td>
+	<td class="s45" id="home_off_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_off_DVOA_rank)</script></td>
+	<td class="s45" id="home_off_wtd_DVOA" dir="ltr"><script type="text/javascript">document.write(home_off_wtd_DVOA)</script></td>
+	<td class="s45" id="home_off_wtd_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_off_wtd_DVOA_rank)</script></td>
+	<td class="s46"  id="home_def_DVOA" dir="ltr"><script type="text/javascript">document.write(home_def_DVOA)</script></td>
+	<td class="s46" id="home_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_def_DVOA_rank)</script></td>
+	<td class="s46" id="home_def_wtd_DVOA" dir="ltr"><script type="text/javascript">document.write(home_def_wtd_DVOA)</script></td>
+	<td class="s47" id="home_def_wtd_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_def_wtd_DVOA_rank)</script></td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R14" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s33" dir="ltr">PASSING GAME</td>
+	<td class="s33" dir="ltr" colspan="3" rowspan="2">Impacted Players:</td>
+	<td class="s18" dir="ltr" colspan="2">Pass Off.</td>
+	<td class="s17" dir="ltr" colspan="2">Pass Def.</td>
+	<td class="s18" dir="ltr" colspan="2">O-Line Pass</td>
+	<td class="s17" dir="ltr" colspan="2">D-Line Pass</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R15" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s33" dir="ltr">Team</td>
+	<td class="s48" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s17" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s17" dir="ltr">Rk.</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R16" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s49" id="away_team_3" dir="ltr"><script type="text/javascript">document.write(away_team)</script></td>
+	<td class="s49" id="away_passing_impacted" dir="ltr" colspan="3"><script type="text/javascript">document.write(away_passing_impacted)</script></td>
+	<td class="s50" id="away_pass_off_DVOA" dir="ltr"><script type="text/javascript">document.write(away_pass_off_DVOA)</script></td>
+	<td class="s50" id="away_pass_off_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_pass_off_DVOA_rank)</script></td>
+	<td class="s51" id="away_pass_def_DVOA" dir="ltr"><script type="text/javascript">document.write(away_pass_def_DVOA)</script></td>
+	<td class="s52" id="away_pass_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_pass_def_DVOA_rank)</script></td>
+	<td class="s50" id="away_oline_pass_DVOA" dir="ltr"><script type="text/javascript">document.write(away_oline_pass_DVOA)</script></td>
+	<td class="s50" id="away_oline_pass_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_oline_pass_DVOA_rank)</script></td>
+	<td class="s51" id="away_dline_pass_DVOA" dir="ltr"><script type="text/javascript">document.write(away_dline_pass_DVOA)</script></td>
+	<td class="s52" id="away_dline_pass_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_dline_pass_DVOA_rank)</script></td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R17" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s53" id="home_team_3" dir="ltr"><script type="text/javascript">document.write(home_team)</script></td>
+	<td class="s53" id="home_passing_impacted" dir="ltr" colspan="3"><script type="text/javascript">document.write(home_passing_impacted)</script></td>
+	<td class="s54" id="home_pass_off_DVOA" dir="ltr"><script type="text/javascript">document.write(home_pass_off_DVOA)</script></td>
+	<td class="s54" id="home_pass_off_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_pass_off_DVOA_rank)</script></td>
+	<td class="s55" id="home_pass_def_DVOA" dir="ltr"><script type="text/javascript">document.write(home_pass_def_DVOA)</script></td>
+	<td class="s56" id="home_pass_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_pass_def_DVOA_rank)</script></td>
+	<td class="s54" id="home_oline_pass_DVOA" dir="ltr"><script type="text/javascript">document.write(home_oline_pass_DVOA)</script></td>
+	<td class="s54" id="home_oline_pass_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_oline_pass_DVOA_rank)</script></td>
+	<td class="s55" id="home_dline_pass_DVOA" dir="ltr"><script type="text/javascript">document.write(home_dline_pass_DVOA)</script></td>
+	<td class="s56" id="home_dline_pass_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_dline_pass_DVOA_rank)</script></td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R18" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s33" dir="ltr">RUNNING GAME</td>
+	<td class="s33" dir="ltr" colspan="3" rowspan="2">Impacted Players:</td>
+	<td class="s18" dir="ltr" colspan="2">Rush Off.</td>
+	<td class="s17" dir="ltr" colspan="2">Rush Def.</td>
+	<td class="s18" dir="ltr" colspan="2">O-Line Rush</td>
+	<td class="s17" dir="ltr" colspan="2">D-Line Rush</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R19" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s33" dir="ltr">Team</td>
+	<td class="s48" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s17" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s17" dir="ltr">Rk.</td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R20" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s49" id="away_team_4" dir="ltr"><script type="text/javascript">document.write(away_team)</script></td>
+	<td class="s49" id="away_running_impacted" dir="ltr" colspan="3"><script type="text/javascript">document.write(away_running_impacted)</script></td>
+	<td class="s57" id="away_rush_off_DVOA" dir="ltr"><script type="text/javascript">document.write(away_rush_off_DVOA)</script></td>
+	<td class="s57" id="away_rush_off_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_rush_off_DVOA_rank)</script></td>
+	<td class="s58" id="away_rush_def_DVOA" dir="ltr"><script type="text/javascript">document.write(away_rush_def_DVOA)</script></td>
+	<td class="s59" id="away_rush_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_rush_def_DVOA_rank)</script></td>
+	<td class="s57" id="away_oline_rush_DVOA" dir="ltr"><script type="text/javascript">document.write(away_oline_rush_DVOA)</script></td>
+	<td class="s57" id="away_oline_rush_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_oline_rush_DVOA_rank)</script></td>
+	<td class="s58" id="away_dline_rush_DVOA" dir="ltr"><script type="text/javascript">document.write(away_dline_rush_DVOA)</script></td>
+	<td class="s59" id="away_dline_rush_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_dline_rush_DVOA_rank)</script></td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R21" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s53" id="home_team_4" dir="ltr"><script type="text/javascript">document.write(home_team)</script></td>
+	<td class="s53" id="home_running_impacted" dir="ltr" colspan="3"><script type="text/javascript">document.write(home_running_impacted)</script></td>
+	<td class="s60" id="home_rush_off_DVOA" dir="ltr"><script type="text/javascript">document.write(home_rush_off_DVOA)</script></td>
+	<td class="s60" id="home_rush_off_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_rush_off_DVOA_rank)</script></td>
+	<td class="s61" id="home_rush_def_DVOA" dir="ltr"><script type="text/javascript">document.write(home_rush_def_DVOA)</script></td>
+	<td class="s62" id="home_rush_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_rush_def_DVOA_rank)</script></td>
+	<td class="s60" id="home_oline_rush_DVOA" dir="ltr"><script type="text/javascript">document.write(home_oline_rush_DVOA)</script></td>
+	<td class="s60" id="home_oline_rush_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_oline_rush_DVOA_rank)</script></td>
+	<td class="s61" id="home_dline_rush_DVOA" dir="ltr"><script type="text/javascript">document.write(home_dline_rush_DVOA)</script></td>
+	<td class="s62" id="home_dline_rush_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_dline_rush_DVOA_rank)</script></td>
+	<td class="s10"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R22" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s63" dir="ltr">#1 WRs</td>
+	<td class="s17" dir="ltr" colspan="2" rowspan="2">Opponent</td>
+	<td class="s18" dir="ltr" colspan="3">Def. DVOA</td>
+	<td class="s18" dir="ltr" colspan="3">Targets/Game</td>
+	<td class="s17" dir="ltr" colspan="3">Yards/Game</td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R23" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s63" dir="ltr">Player</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s18" dir="ltr">Diff.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s17" dir="ltr">Diff.</td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R24" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s65" id="away_WR1" dir="ltr"><script type="text/javascript">document.write(away_WR1)</script></td>
+	<td class="s18" dir="ltr">vs.</td>
+	<td class="s49" id="home_team_5" dir="ltr"><script type="text/javascript">document.write(home_team)</script></td>
+	<td class="s26" id="away_WR1_def_DVOA" dir="ltr"><script type="text/javascript">document.write(away_WR1_def_DVOA)</script></td>
+	<td class="s26" id="away_WR1_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_WR1_def_DVOA_rank)</script></td>
+	<td class="s26" id="away_WR1_def_DVOA_lgavg" dir="ltr"><script type="text/javascript">document.write(away_WR1_def_DVOA_lgavg)</script></td>
+	<td class="s26" id="away_WR1_targets" dir="ltr"><script type="text/javascript">document.write(away_WR1_targets)</script></td>
+	<td class="s26" id="away_WR1_targets_lgavg" dir="ltr"><script type="text/javascript">document.write(away_WR1_targets_lgavg)</script></td>
+	<td class="s66" id="away_WR1_targets_diff"><script type="text/javascript">document.write(away_WR1_targets_diff)</script></td>
+	<td class="s26" id="away_WR1_yards" dir="ltr"><script type="text/javascript">document.write(away_WR1_yards)</script></td>
+	<td class="s26" id="away_WR1_yards_lgavg" dir="ltr"><script type="text/javascript">document.write(away_WR1_yards_lgavg)</script></td>
+	<td class="s37" id="away_WR1_yards_diff"><script type="text/javascript">document.write(away_WR1_yards_diff)</script></td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R25" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s67" id="home_WR1" dir="ltr"><script type="text/javascript">document.write(home_WR1)</script></td>
+	<td class="s68" dir="ltr">vs.</td>
+	<td class="s53" id="away_team_5" dir="ltr"><script type="text/javascript">document.write(away_team)</script></td>
+	<td class="s27" id="home_WR1_def_DVOA" dir="ltr"><script type="text/javascript">document.write(home_WR1_def_DVOA)</script></td>
+	<td class="s27" id="home_WR1_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_WR1_def_DVOA_rank)</script></td>
+	<td class="s27" id="home_WR1_def_DVOA_lgavg" dir="ltr"><script type="text/javascript">document.write(home_WR1_def_DVOA_lgavg)</script></td>
+	<td class="s27" id="home_WR1_targets" dir="ltr"><script type="text/javascript">document.write(home_WR1_targets)</script></td>
+	<td class="s27" id="home_WR1_targets_lgavg" dir="ltr"><script type="text/javascript">document.write(home_WR1_targets_lgavg)</script></td>
+	<td class="s69" id="home_WR1_targets_diff"><script type="text/javascript">document.write(home_WR1_targets_diff)</script></td>
+	<td class="s27" id="home_WR1_yards" dir="ltr"><script type="text/javascript">document.write(home_WR1_yards)</script></td>
+	<td class="s27" id="home_WR1_yards_lgavg" dir="ltr"><script type="text/javascript">document.write(home_WR1_yards_lgavg)</script></td>
+	<td class="s44" id="home_WR1_yards_diff"><script type="text/javascript">document.write(home_WR1_yards_diff)</script></td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R26" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s63" dir="ltr">#2 WRs</td>
+	<td class="s17" dir="ltr" colspan="2" rowspan="2">Opponent</td>
+	<td class="s18" dir="ltr" colspan="3">Def. DVOA</td>
+	<td class="s18" dir="ltr" colspan="3">Targets/Game</td>
+	<td class="s17" dir="ltr" colspan="3">Yards/Game</td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R27" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s63" dir="ltr">Player</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s18" dir="ltr">Diff.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s17" dir="ltr">Diff.</td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R28" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s65" id="away_WR2" dir="ltr"><script type="text/javascript">document.write(away_WR2)</script></td>
+	<td class="s18" dir="ltr">vs.</td>
+	<td class="s49" id="home_team_6" dir="ltr"><script type="text/javascript">document.write(home_team)</script></td>
+	<td class="s26" id="away_WR2_def_DVOA" dir="ltr"><script type="text/javascript">document.write(away_WR2_def_DVOA)</script></td>
+	<td class="s26" id="away_WR2_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_WR2_def_DVOA_rank)</script></td>
+	<td class="s26" id="away_WR2_def_DVOA_lgavg" dir="ltr"><script type="text/javascript">document.write(away_WR2_def_DVOA_lgavg)</script></td>
+	<td class="s26" id="away_WR2_targets" dir="ltr"><script type="text/javascript">document.write(away_WR2_targets)</script></td>
+	<td class="s26" id="away_WR2_targets_lgavg" dir="ltr"><script type="text/javascript">document.write(away_WR2_targets_lgavg)</script></td>
+	<td class="s66" id="away_WR2_targets_diff"><script type="text/javascript">document.write(away_WR2_targets_diff)</script></td>
+	<td class="s26" id="away_WR2_yards" dir="ltr"><script type="text/javascript">document.write(away_WR2_yards)</script></td>
+	<td class="s26" id="away_WR2_yards_lgavg" dir="ltr"><script type="text/javascript">document.write(away_WR2_yards_lgavg)</script></td>
+	<td class="s37" id="away_WR2_yards_diff"><script type="text/javascript">document.write(away_WR2_yards_diff)</script></td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R29" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s67" id="home_WR2" dir="ltr"><script type="text/javascript">document.write(home_WR2)</script></td>
+	<td class="s68" dir="ltr">vs.</td>
+	<td class="s53" id="away_team_6" dir="ltr"><script type="text/javascript">document.write(away_team)</script></td>
+	<td class="s27" id="home_WR2_def_DVOA" dir="ltr"><script type="text/javascript">document.write(home_WR2_def_DVOA)</script></td>
+	<td class="s27" id="home_WR2_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_WR2_def_DVOA_rank)</script></td>
+	<td class="s27" id="home_WR2_def_DVOA_lgavg" dir="ltr"><script type="text/javascript">document.write(home_WR2_def_DVOA_lgavg)</script></td>
+	<td class="s27" id="home_WR2_targets" dir="ltr"><script type="text/javascript">document.write(home_WR2_targets)</script></td>
+	<td class="s27" id="home_WR2_targets_lgavg" dir="ltr"><script type="text/javascript">document.write(home_WR2_targets_lgavg)</script></td>
+	<td class="s69" id="home_WR2_targets_diff"><script type="text/javascript">document.write(home_WR2_targets_diff)</script></td>
+	<td class="s27" id="home_WR2_yards" dir="ltr"><script type="text/javascript">document.write(home_WR2_yards)</script></td>
+	<td class="s27" id="home_WR2_yards_lgavg" dir="ltr"><script type="text/javascript">document.write(home_WR2_yards_lgavg)</script></td>
+	<td class="s44" id="home_WR2_yards_diff"><script type="text/javascript">document.write(home_WR2_yards_diff)</script></td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R30" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s70">#3+ WRs</td>
+	<td class="s17" dir="ltr" colspan="2" rowspan="2">Opponent</td>
+	<td class="s18" dir="ltr" colspan="3">Def. DVOA</td>
+	<td class="s18" dir="ltr" colspan="3">Targets/Game</td>
+	<td class="s17" dir="ltr" colspan="3">Yards/Game</td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R31" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s70">Players</td>
+	<td class="s19">#</td>
+	<td class="s19">Rk.</td>
+	<td class="s19">LgAvg</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s18" dir="ltr">Diff.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s17" dir="ltr">Diff.</td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R32" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s71 softmerge">
+		<div class="softmerge-inner" id="away_WR3s" style="width: 112px; left: -1px;"><script type="text/javascript">document.write(away_WR3s)</script></div>
+</td>
+	<td class="s19">vs.</td>
+	<td class="s34" id="home_team_7"><script type="text/javascript">document.write(home_team)</script></td>
+	<td class="s26" id="away_WR3_def_DVOA" dir="ltr"><script type="text/javascript">document.write(away_WR3_def_DVOA)</script></td>
+	<td class="s26" id="away_WR3_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_WR3_def_DVOA_rank)</script></td>
+	<td class="s26" id="away_WR3_def_DVOA_lgavg" dir="ltr"><script type="text/javascript">document.write(away_WR3_def_DVOA_lgavg)</script></td>
+	<td class="s26" id="away_WR3_targets" dir="ltr"><script type="text/javascript">document.write(away_WR3_targets)</script></td>
+	<td class="s26" id="away_WR3_targets_lgavg" dir="ltr"><script type="text/javascript">document.write(away_WR3_targets_lgavg)</script></td>
+	<td class="s66" id="away_WR3_targets_diff"><script type="text/javascript">document.write(away_WR3_targets_diff)</script></td>
+	<td class="s26" id="away_WR3_yards" dir="ltr"><script type="text/javascript">document.write(away_WR3_yards)</script></td>
+	<td class="s26" id="away_WR3_yards_lgavg" dir="ltr"><script type="text/javascript">document.write(away_WR3_yards_lgavg)</script></td>
+	<td class="s37" id="away_WR3_yards_diff"><script type="text/javascript">document.write(away_WR3_yards_diff)</script></td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R33" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s72 softmerge">
+		<div class="softmerge-inner" id="home_WR3s" style="width: 112px; left: -1px;"><script type="text/javascript">document.write(home_WR3s)</script></div>
+</td>
+	<td class="s73">vs.</td>
+	<td class="s41" id="away_team_7"><script type="text/javascript">document.write(away_team)</script></td>
+	<td class="s27" id="home_WR3_def_DVOA" dir="ltr"><script type="text/javascript">document.write(home_WR3_def_DVOA)</script></td>
+	<td class="s27" id="home_WR3_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_WR3_def_DVOA_rank)</script></td>
+	<td class="s27" id="home_WR3_def_DVOA_lgavg" dir="ltr"><script type="text/javascript">document.write(home_WR3_def_DVOA_lgavg)</script></td>
+	<td class="s27" id="home_WR3_targets" dir="ltr"><script type="text/javascript">document.write(home_WR3_targets)</script></td>
+	<td class="s27" id="home_WR3_targets_lgavg" dir="ltr"><script type="text/javascript">document.write(home_WR3_targets_lgavg)</script></td>
+	<td class="s69" id="home_WR3_targets_diff"><script type="text/javascript">document.write(home_WR3_targets_diff)</script></td>
+	<td class="s27" id="home_WR3_yards" dir="ltr"><script type="text/javascript">document.write(home_WR3_yards)</script></td>
+	<td class="s27" id="home_WR3_yards_lgavg" dir="ltr"><script type="text/javascript">document.write(home_WR3_yards_lgavg)</script></td>
+	<td class="s44" id="home_WR3_yards_diff"><script type="text/javascript">document.write(home_WR3_yards_diff)</script></td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R34" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s63" dir="ltr">TEs</td>
+	<td class="s17" dir="ltr" colspan="2" rowspan="2">Opponent</td>
+	<td class="s18" dir="ltr" colspan="3">Def. DVOA</td>
+	<td class="s18" dir="ltr" colspan="3">Targets/Game</td>
+	<td class="s17" dir="ltr" colspan="3">Yards/Game</td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R35" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s63" dir="ltr">Players</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s18" dir="ltr">Diff.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s17" dir="ltr">Diff.</td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R36" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s65" id="away_TEs" dir="ltr"><script type="text/javascript">document.write(away_TEs)</script></td>
+	<td class="s18" dir="ltr">vs.</td>
+	<td class="s49" id="home_team_8" dir="ltr"><script type="text/javascript">document.write(home_team)</script></td>
+	<td class="s26" id="away_TE_def_DVOA" dir="ltr"><script type="text/javascript">document.write(away_TE_def_DVOA)</script></td>
+	<td class="s26" id="away_TE_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_TE_def_DVOA_rank)</script></td>
+	<td class="s26" id="away_TE_def_DVOA_lgavg" dir="ltr"><script type="text/javascript">document.write(away_TE_def_DVOA_lgavg)</script></td>
+	<td class="s26" id="away_TE_targets" dir="ltr"><script type="text/javascript">document.write(away_TE_targets)</script></td>
+	<td class="s26" id="away_TE_targets_lgavg" dir="ltr"><script type="text/javascript">document.write(away_TE_targets_lgavg)</script></td>
+	<td class="s66" id="away_TE_targets_diff"><script type="text/javascript">document.write(away_TE_targets_diff)</script></td>
+	<td class="s26" id="away_TE_yards" dir="ltr"><script type="text/javascript">document.write(away_TE_yards)</script></td>
+	<td class="s26" id="away_TE_yards_lgavg" dir="ltr"><script type="text/javascript">document.write(away_TE_yards_lgavg)</script></td>
+	<td class="s37" id="away_TE_yards_diff"><script type="text/javascript">document.write(away_TE_yards_diff)</script></td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R37" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s67" id="home_TEs" dir="ltr"><script type="text/javascript">document.write(home_TEs)</script></td>
+	<td class="s68" dir="ltr">vs.</td>
+	<td class="s53" id="away_team_8" dir="ltr"><script type="text/javascript">document.write(away_team)</script></td>
+	<td class="s27" id="home_TE_def_DVOA" dir="ltr"><script type="text/javascript">document.write(home_TE_def_DVOA)</script></td>
+	<td class="s27" id="home_TE_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_TE_def_DVOA_rank)</script></td>
+	<td class="s27" id="home_TE_def_DVOA_lgavg" dir="ltr"><script type="text/javascript">document.write(home_TE_def_DVOA_lgavg)</script></td>
+	<td class="s27" id="home_TE_targets" dir="ltr"><script type="text/javascript">document.write(home_TE_targets)</script></td>
+	<td class="s27" id="home_TE_targets_lgavg" dir="ltr"><script type="text/javascript">document.write(home_TE_targets_lgavg)</script></td>
+	<td class="s69" id="home_TE_targets_diff"><script type="text/javascript">document.write(home_TE_targets_diff)</script></td>
+	<td class="s27" id="home_TE_yards" dir="ltr"><script type="text/javascript">document.write(home_TE_yards)</script></td>
+	<td class="s27" id="home_TE_yards_lgavg" dir="ltr"><script type="text/javascript">document.write(home_TE_yards_lgavg)</script></td>
+	<td class="s44" id="home_TE_yards_diff"><script type="text/javascript">document.write(home_TE_yards_diff)</script></td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R38" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s63" dir="ltr">RBs (as receivers)</td>
+	<td class="s17" dir="ltr" colspan="2" rowspan="2">Opponent</td>
+	<td class="s18" dir="ltr" colspan="3">Def. DVOA</td>
+	<td class="s18" dir="ltr" colspan="3">Targets/Game</td>
+	<td class="s17" dir="ltr" colspan="3">Yards/Game</td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R39" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s63" dir="ltr">Players</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">Rk.</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s18" dir="ltr">Diff.</td>
+	<td class="s18" dir="ltr">#</td>
+	<td class="s18" dir="ltr">LgAvg</td>
+	<td class="s17" dir="ltr">Diff.</td>
+	<td class="s64" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R40" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s65" id="away_RBs" dir="ltr"><script type="text/javascript">document.write(away_RBs)</script></td>
+	<td class="s18" dir="ltr">vs.</td>
+	<td class="s49" id="home_team_9" dir="ltr"><script type="text/javascript">document.write(home_team)</script></td>
+	<td class="s26" id="away_RB_def_DVOA" dir="ltr"><script type="text/javascript">document.write(away_RB_def_DVOA)</script></td>
+	<td class="s26" id="away_RB_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(away_RB_def_DVOA_rank)</script></td>
+	<td class="s26" id="away_RB_def_DVOA_lgavg" dir="ltr"><script type="text/javascript">document.write(away_RB_def_DVOA_lgavg)</script></td>
+	<td class="s26" id="away_RB_targets" dir="ltr"><script type="text/javascript">document.write(away_RB_targets)</script></td>
+	<td class="s26" id="away_RB_targets_lgavg" dir="ltr"><script type="text/javascript">document.write(away_RB_targets_lgavg)</script></td>
+	<td class="s66" id="away_RB_targets_diff"><script type="text/javascript">document.write(away_RB_targets_diff)</script></td>
+	<td class="s26" id="away_RB_yards" dir="ltr"><script type="text/javascript">document.write(away_RB_yards)</script></td>
+	<td class="s26" id="away_RB_yards_lgavg" dir="ltr"><script type="text/javascript">document.write(away_RB_yards_lgavg)</script></td>
+	<td class="s37" id="away_RB_yards_diff"><script type="text/javascript">document.write(away_RB_yards_diff)</script></td>
+	<td class="s74" dir="ltr"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R41" style="height: 20px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s0"></td>
+	<td class="s67" id="home_RBs" dir="ltr"><script type="text/javascript">document.write(home_RBs)</script></td>
+	<td class="s68" dir="ltr">vs.</td>
+	<td class="s53" id="away_team_9" dir="ltr"><script type="text/javascript">document.write(away_team)</script></td>
+	<td class="s27" id="home_RB_def_DVOA" dir="ltr"><script type="text/javascript">document.write(home_RB_def_DVOA)</script></td>
+	<td class="s27" id="home_RB_def_DVOA_rank" dir="ltr"><script type="text/javascript">document.write(home_RB_def_DVOA_rank)</script></td>
+	<td class="s27" id="home_RB_def_DVOA_lgavg" dir="ltr"><script type="text/javascript">document.write(home_RB_def_DVOA_lgavg)</script></td>
+	<td class="s27" id="home_RB_targets" dir="ltr"><script type="text/javascript">document.write(home_RB_targets)</script></td>
+	<td class="s27" id="home_RB_targets_lgavg" dir="ltr"><script type="text/javascript">document.write(home_RB_targets_lgavg)</script></td>
+	<td class="s69" id="home_RB_targets_diff"><script type="text/javascript">document.write(home_RB_targets_diff)</script></td>
+	<td class="s27" id="home_RB_yards" dir="ltr"><script type="text/javascript">document.write(home_RB_yards)</script></td>
+	<td class="s27" id="home_RB_yards_lgavg" dir="ltr"><script type="text/javascript">document.write(home_RB_yards_lgavg)</script></td>
+	<td class="s44" id="home_RB_yards_diff"><script type="text/javascript">document.write(home_RB_yards_diff)</script></td>
+	<td class="s74" dir="ltr"></td>
+</tr>
+	<tr style='height:12px;'>
+		<th id="2070762650R597" style="height: 12px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s3"></td>
+	<td class="s5" dir="ltr"></td>
+	<td class="s77" dir="ltr"></td>
+	<td class="s5" dir="ltr"></td>
+	<td class="s78" dir="ltr"></td>
+	<td class="s78" dir="ltr"></td>
+	<td class="s78" dir="ltr"></td>
+	<td class="s78" dir="ltr"></td>
+	<td class="s78" dir="ltr"></td>
+	<td class="s79"></td>
+	<td class="s78" dir="ltr"></td>
+	<td class="s78" dir="ltr"></td>
+	<td class="s79"></td>
+	<td class="s2"></td>
+</tr>
+	<tr style='height:20px;'>
+		<th id="2070762650R598" style="height: 20px;" class="row-headers-background row-header-shim">
+				</th>
+					<td class="s0"></td>
+					<td class="s80" dir="ltr" colspan="12">DVOA values and rankings © [2015] Football Outsiders, Inc. All rights reserved.</td>
+					<td class="s2"></td>
+				</tr>
+	<tr style='height:10px;'>
+		<th id="2070762650R597" style="height: 10px;" class="row-headers-background row-header-shim">
+</th>
+	<td class="s3"></td>
+	<td class="s3" dir="ltr"></td>
+	<td class="s3" dir="ltr"></td>
+	<td class="s3" dir="ltr"></td>
+	<td class="s3" dir="ltr"></td>
+	<td class="s3" dir="ltr"></td>
+	<td class="s3" dir="ltr"></td>
+	<td class="s3" dir="ltr"></td>
+	<td class="s3" dir="ltr"></td>
+	<td class="s3"></td>
+	<td class="s3" dir="ltr"></td>
+	<td class="s3" dir="ltr"></td>
+	<td class="s3"></td>
+	<td class="s3"></td>
+</tr>
+			</tbody>
+		</table>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript' nonce='1i8BY0W3EsheCLzojofSzt/QAzU'>
+function posObj(sheet, id, row, col, x, y) {
+var rtl = false;
+var sheetElement = document.getElementById(sheet);
+if (!sheetElement) {
+sheetElement = document.getElementById(sheet + '-grid-container');
+}
+if (sheetElement) {
+rtl = sheetElement.getAttribute('dir') == 'rtl';
+}
+var r = document.getElementById(sheet+'R'+row);
+var c = document.getElementById(sheet+'C'+col);
+if (r && c) {
+var objElement = document.getElementById(id);
+var s = objElement.style;
+var t = y;
+while (r && r != sheetElement) {
+  t += r.offsetTop;
+  r = r.offsetParent;
+}
+var offsetX = x;
+while (c && c != sheetElement) {
+  offsetX += c.offsetLeft;
+  c = c.offsetParent;
+}
+if (rtl) {
+  offsetX -= objElement.offsetWidth;
+}
+s.left = offsetX + 'px';
+s.top = t + 'px';
+s.display = 'block';
+s.border = '1px solid #000000';
+}
+};
+function posObjs() {
+};
+posObjs();</script>
+<script type="text/javascript" nonce="1i8BY0W3EsheCLzojofSzt/QAzU">activeSheetId = '2070762650'; switchToSheet('2070762650');</script>
+</body>
+</html>
